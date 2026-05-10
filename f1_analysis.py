@@ -1,14 +1,20 @@
 import pandas as pd
 
-# Formula 1 könüllüsü olduğun üçün kiçik bir analiz datası
+# Köhnə struktur qalır, yalnız datanı yeniləyirik
 data = {
-    'Pilot': ['Verstappen', 'Perez', 'Hamilton', 'Alonso'],
-    'Xal': [454, 285, 240, 206],
-    'Komanda': ['Red Bull', 'Red Bull', 'Mercedes', 'Aston Martin']
+    'Şəhər': ['Xankəndi', 'Gədəbəy', 'Bakı'],
+    'Vəzifə': ['Sektor Nəzarətçisi', 'Logistika Dəstəyi', 'Media Mərkəzi'],
+    'Sektor': ['A Sektoru', 'Pit-Lane', 'Paddock']
 }
 
 df = pd.DataFrame(data)
 
-print("--- Formula 1 Pilot Analizi ---")
+# Sənin köhnə print strukturun
+print("--- Formula 1 Könüllü Məlumatları ---")
 print(df)
-print("\nƏn yüksək xal:", df['Xal'].max())
+
+# Analiz hissəsi
+def analiz():
+    print(f"\nSistemdə {len(df)} fərqli şəhər və vəzifə qeydə alındı.")
+
+analiz()
